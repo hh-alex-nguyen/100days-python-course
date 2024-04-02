@@ -1,5 +1,5 @@
-character = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u',
-             'v', 'w', 'x', 'y', 'z']
+character = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
+             'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
 
 def caesar_cipher(text="abc", shift=1):
@@ -15,7 +15,7 @@ def caesar_cipher(text="abc", shift=1):
     return text
 
 
-text = input('Password to encrypt: ')
-shift = int(input('Enter shift: '))
-print(caesar_cipher(text, shift))
+text_input = input('Password to encrypt: ')
+shift_input = int(input('Enter shift: '))
+print(caesar_cipher(text_input, shift_input))
 
