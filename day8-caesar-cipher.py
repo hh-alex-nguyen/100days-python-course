@@ -2,20 +2,27 @@ character = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
              'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
 
-def caesar_cipher(text="abc", shift=1):
+def caesar_cipher(plain_text, shift_amount, direction="encode"):
     """
-    Caesar Cipher return the cipher text in alphabetical order with specified shift
+    Caesar Cipher return the cipher text in alphabetical order with specified shift and direction in alphabet character
     """
-    text = text.lower()
-    shift = shift % len(character)
-    shift_char = character[shift:] + character[:shift]
-    # maketrans argument must be str not list
-    table = str.maketrans(''.join(character), ''.join(shift_char))
-    text = text.translate(table)
-    return text
+    code = ''
+    if direction == 'decode':
+        shift_amount *= -1
 
+    for char in plain_text:
+        if char in character:
+            index = character.index(char)
+            new_index = index + shift_amount
+            new_char = character[new_index]
+            code += new_char
+        else:
+            code += char
 
-text_input = input('Password to encrypt: ')
+    return code
+
+text_input = input('Password to encrypt: ').lower()
 shift_input = int(input('Enter shift: '))
-print(caesar_cipher(text_input, shift_input))
+direction_input = input('Encode or decode: ').lower()
+print(caesar_cipher(text_input, shift_input, direction_input))
 
