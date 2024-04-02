@@ -1,7 +1,6 @@
 character = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u',
              'v', 'w', 'x', 'y', 'z']
 
-
 # def caesarCipher(text, shift):
 #     text = text.lower()
 #     table = str.maketrans()
@@ -15,3 +14,4 @@ character = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n
 
 print(character[3:])
 print(character[:3])
+# abc
